@@ -3817,11 +3817,23 @@ blockquote {
   display: block;
 }
 
+.primary-button2.full-width-mobile {
+  display: block;
+}
+
 .primary-button.margin-top-button-form, .primary-button.margin-top-button {
   margin-top: 40px;
 }
 
+.primary-button2.margin-top-button-form, .primary-button2.margin-top-button {
+  margin-top: 40px;
+}
+
 .primary-button.button-tablet-top-gap {
+  margin-bottom: 10px;
+}
+
+.primary-button2.button-tablet-top-gap {
   margin-bottom: 10px;
 }
 
@@ -4983,7 +4995,8 @@ blockquote {
 }
 
 .footer-logo {
-  height: 50px;
+	max-width: 120px;
+  height: auto;
 }
 
 .menu-buttons-wrap {
@@ -6086,7 +6099,8 @@ blockquote {
 }
 
 .logo {
-  height: 42px;
+	max-width: 120px;
+  height: auto;
 }
 
 .widget-section {
@@ -12132,4 +12146,77 @@ blockquote {
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+}
+
+
+.button-container {
+  display: flex;
+  gap: 20px; /* Расстояние между кнопками */
+}
+
+.primary-button2 {
+  border: 1px solid var(--primary);
+  background-color: var(--white);
+  color: var(--primary);
+  text-align: center;
+  border-radius: 30px;
+  justify-content: center;
+  padding: 12px 32px;
+  font-family: Space Grotesk, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5em;
+  transition: all .35s;
+  display: flex;
+}
+
+.primary-button2:hover {
+  background-color: var(--primary);
+  opacity: 1;
+  color: var(--white);
+}
+
+/* Обёртка для ленты логотипов */
+.logo-slider {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	background-color: #ffffff00;
+	padding: 10px 0;
+}
+
+/* Лента логотипов */
+.logo-track {
+	display: flex;
+	justify-content: space-between;
+	animation: scroll 20s linear infinite;
+	width: calc(150px * 8 + 160px); /* количество логотипов * их ширина + отступы */
+	will-change: transform; /* Оптимизация производительности */
+}
+
+/* Настройка логотипов, одинаковый размер */
+.partner-logo {
+	width: auto;
+	height: 120px;
+	margin: 0 20px;
+}
+
+/* Бесшовная анимация */
+@keyframes scroll {
+	0% {
+			transform: translateX(0);
+	}
+	100% {
+			transform: translateX(-100%);
+	}
+}
+
+/* Для плавности и бесшовности */
+.logo-track::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
 }

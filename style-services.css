@@ -4983,7 +4983,8 @@ blockquote {
 }
 
 .footer-logo {
-  height: 50px;
+	max-width: 120px;
+  height: auto;
 }
 
 .menu-buttons-wrap {
@@ -6086,7 +6087,8 @@ blockquote {
 }
 
 .logo {
-  height: 42px;
+	max-width: 120px;
+  height: auto;
 }
 
 .widget-section {
